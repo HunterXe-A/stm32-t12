@@ -23,4 +23,4 @@ jobs:
           THREAD: ${{ secrets.THREAD }}
           URL: ${{ secrets.URL }} 
       run: |
-        gcc-arm-none-eabi
+        arm-none-eabi-gcc
