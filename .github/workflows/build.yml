@@ -23,4 +23,4 @@ jobs:
           THREAD: ${{ secrets.THREAD }}
           URL: ${{ secrets.URL }} 
       run: |
-        arm-none-eabi-gcc -c stm32-t12/User/main.c
+        arm-none-eabi-gcc -c src/User/main.c
