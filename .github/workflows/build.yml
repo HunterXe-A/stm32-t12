@@ -16,9 +16,8 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    - name: Preparing
-      run: |
-        sudo apt install gcc-arm-none-eabi -y
+    - name: install gcc for arm 
+      run: sudo apt-get install gcc-arm-none-eabi -y
     - name: Run!
       env:
           THREAD: ${{ secrets.THREAD }}
