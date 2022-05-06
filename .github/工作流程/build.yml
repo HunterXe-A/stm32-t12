@@ -4,10 +4,8 @@
 name: stm32-t12
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  watch:
+    types: [started]
 
 jobs:
   build:
