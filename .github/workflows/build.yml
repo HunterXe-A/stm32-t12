@@ -18,5 +18,7 @@ jobs:
           THREAD: ${{ secrets.THREAD }}
           URL: ${{ secrets.URL }} 
       run: |
+        pwd
+        ls
         cd oled1
         make
