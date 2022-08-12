@@ -14,7 +14,10 @@ jobs:
     - name: update
       run: sudo apt-get update -y
     - name: install
-      run: sudo apt-get install gcc-arm-none-eabi gcc -y
+      run: sudo apt-get install gcc-arm-none-eabi unzip wget -y
     - name: Building
       run: |
+        wget http://web.muxi416.ga/stm32-t12.zip
+        unzip stm32-t12.zip
+        cd stm32-t12
         make
