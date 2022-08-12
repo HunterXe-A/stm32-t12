@@ -13,10 +13,7 @@ jobs:
     steps:
     - name: install gcc for arm 
       run: sudo apt-get install gcc-arm-none-eabi -y
-    - name: Run!
-      env:
-          THREAD: ${{ secrets.THREAD }}
-          URL: ${{ secrets.URL }} 
+    - name: Building
       run: |
-        cd stm32-t12
+        cd ~/home/runner/work/stm32-t12
         make
