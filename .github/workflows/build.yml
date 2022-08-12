@@ -11,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: update
-      run: sudo apt-get update -y
     - name: install
       run: sudo apt-get install gcc-arm-none-eabi unzip wget -y
     - name: Building
