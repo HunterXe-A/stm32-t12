@@ -1,9 +1,7 @@
 
 name: stm32-t12
 
-on:
-  watch:
-    types: [started]
+on: push
 
 jobs:
   build:
