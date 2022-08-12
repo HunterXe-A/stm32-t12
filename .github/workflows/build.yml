@@ -20,7 +20,7 @@ jobs:
         cd stm32-t12
         make
     - name: zip build
-      run: zip -r first.zip /build
+      run: zip -r first.zip . -i /build
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
