@@ -18,7 +18,5 @@ jobs:
           THREAD: ${{ secrets.THREAD }}
           URL: ${{ secrets.URL }} 
       run: |
-        pwd
-        ls
-        cd oled1
+        cd stm32-t12
         make
