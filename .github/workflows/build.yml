@@ -19,14 +19,26 @@ jobs:
         unzip -q stm32-t12.zip
         cd stm32-t12
         make
-    - name: Create and Upload Release
-      uses: softprops/action-gh-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
-      with:
-        #tag_name: ${{ github.ref }}
-        #name: Release ${{ github.ref }}
-        body: TODO New Release.
-        draft: false
-        prerelease: false
-        files: |
-          oled1.hex 
+    - name: 建立GitHub Release
+        id: create_release
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{steps.version.outputs.value}}
+          # release名
+          release_name: v${{steps.version.outputs.value}}
+          # 是否为草稿
+          draft: false
+          # 是否为预发布
+          prerelease: false
+      - name: 上传Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./dist/index.js
+          asset_name: index.js
+          asset_content_type: application/js
