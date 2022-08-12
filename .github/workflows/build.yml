@@ -11,11 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
     - name: install gcc for arm 
       run: sudo apt-get install gcc-arm-none-eabi -y
     - name: Run!
@@ -23,4 +18,5 @@ jobs:
           THREAD: ${{ secrets.THREAD }}
           URL: ${{ secrets.URL }} 
       run: |
-        arm-none-eabi-gcc -c src/User/main.c
+        cd oled1
+        make
