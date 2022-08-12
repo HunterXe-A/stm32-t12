@@ -20,7 +20,7 @@ jobs:
         cd stm32-t12
         make
     - name: 建立GitHub Release
-        uses: actions/create-release@latest
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
