@@ -13,7 +13,8 @@ jobs:
     steps:
     - name: install gcc for arm 
       run: sudo apt-get install gcc-arm-none-eabi -y
+    - name: update
+      run:apt update -y
     - name: Building
       run: |
-        arm-none-eabi-gcc
         make
