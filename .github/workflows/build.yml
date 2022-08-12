@@ -15,5 +15,5 @@ jobs:
       run: sudo apt-get install gcc-arm-none-eabi -y
     - name: Building
       run: |
-        cd ~/home/runner/work/stm32-t12
+        ls
         make
