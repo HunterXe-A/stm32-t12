@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: install gcc for arm 
-      run: sudo apt-get install gcc-arm-none-eabi -y
     - name: update
-      run: apt update -y
+      run: sudo apt-get update -y
+    - name: install
+      run: sudo apt-get install gcc-arm-none-eabi gcc -y
     - name: Building
       run: |
         make
