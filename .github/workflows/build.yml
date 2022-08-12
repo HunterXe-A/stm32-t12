@@ -20,7 +20,6 @@ jobs:
         cd stm32-t12
         make
     - name: 建立GitHub Release
-        id: create_release
         uses: actions/create-release@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -32,8 +31,7 @@ jobs:
           draft: false
           # 是否为预发布
           prerelease: false
-      - name: 上传Release Asset
-        id: upload-release-asset
+      - name: 上传Release
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
