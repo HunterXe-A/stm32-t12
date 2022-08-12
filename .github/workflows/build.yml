@@ -15,4 +15,4 @@ jobs:
       run: sudo apt-get install gcc-arm-none-eabi -y
     - name: Building
       run: |
-        make -f /oled1/Makefile
+        make
