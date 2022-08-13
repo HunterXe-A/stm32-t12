@@ -1,7 +1,7 @@
 #! /bin/bash
 a=$1
 if [ "$a" == "" ]; then
-echo "default"
+echo "Use Default"
 a="MuXi"
 fi
 git add .

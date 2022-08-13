@@ -1,8 +1,0 @@
-#include "system.h"
-//#include "oled.h"
-//#include "bmp.h"
-//#include "menu.h"
-//#include "key.h"
-//#include "eeprom.h"
-#include "adc.h"
-#include "pid.h"
