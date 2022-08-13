@@ -28,4 +28,4 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          first.zip 
+          stm32-t12/first.zip 
