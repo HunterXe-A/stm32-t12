@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: test
-          path: build
+          path: first.zip
           
     - name: Create and Upload Release
       uses: softprops/action-gh-release@v1
