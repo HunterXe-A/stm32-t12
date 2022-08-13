@@ -1,6 +1,6 @@
 #! /bin/bash
 a=$1
-if [ "$a" == "" ]; then
+if [$a == null]; then
 echo "default"
 a="MuXi"
 fi
