@@ -91,7 +91,6 @@ int main(void)
   MX_DMA_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-  oled_full();
   oled_cls();
   /* USER CODE END 2 */
 
@@ -101,6 +100,7 @@ int main(void)
   {
     /* USER CODE END WHILE */
     oled_display_char(0, 0, "MuXi6", 2);
+    HAL_Delay(500);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
