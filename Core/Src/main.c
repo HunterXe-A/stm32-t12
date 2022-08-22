@@ -99,7 +99,9 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    oled_display_char(0, 0, "MuXi6", 2);
+    oled_show_string(0, 0, "MuXi6", 2);
+    HAL_Delay(500);
+    oled_cls();
     HAL_Delay(500);
     /* USER CODE BEGIN 3 */
   }
