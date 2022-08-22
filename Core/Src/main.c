@@ -25,7 +25,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "oled.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -75,14 +75,14 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+  oled_init();
   /* USER CODE END Init */
 
   /* Configure the system clock */
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+  
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -91,7 +91,8 @@ int main(void)
   MX_DMA_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-
+  oled_full();
+  oled_cls();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -99,7 +100,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+    oled_display_char(0, 0, "MuXi6", 2);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
